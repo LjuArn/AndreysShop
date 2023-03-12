@@ -21,7 +21,7 @@ public class ItemEntity extends BaseEntity {
     private CategoryEntity category;
 
     @Column(nullable = false)
-    private boolean gender;
+    private String gender;
 
     public ItemEntity() {
     }
@@ -62,11 +62,11 @@ public class ItemEntity extends BaseEntity {
         return this;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public ItemEntity setGender(boolean gender) {
+    public ItemEntity setGender(String gender) {
         this.gender = gender;
         return this;
     }
