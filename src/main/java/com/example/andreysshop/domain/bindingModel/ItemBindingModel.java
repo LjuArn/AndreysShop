@@ -5,10 +5,7 @@ import com.example.andreysshop.domain.entity.enums.CategoryNameEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.Length;
 
 import java.math.BigDecimal;
@@ -21,9 +18,10 @@ public class ItemBindingModel {
     private String description;
     @NotNull(message = "Enter valid category")
     private CategoryNameEnum category;
+    @NotEmpty(message = "Enter valid gender")
     private String gender;
     @DecimalMin(value = "0", message = "Price must be positive number")
-    private BigDecimal price;
+    private BigDecimal price = BigDecimal.valueOf(0);
 
     public ItemBindingModel() {
     }

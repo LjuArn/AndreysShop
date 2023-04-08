@@ -3,9 +3,9 @@ package com.example.andreysshop.domain.bindingModel;
 import jakarta.validation.constraints.Size;
 
 public class UserLoginBindingModel {
-    @Size(min = 2, message = "Username length must be more than two characters")
+    @Size(min = 2, message = "Username length must be more than two characters!!!!!!!!!!!!!!!!!")
     private String username;
-    @Size(min = 2, message = "Password length must be more than two characters")
+    @Size(min = 2, message = "Password length must be more than two characters!!!")
     private String password;
 
     public UserLoginBindingModel() {
