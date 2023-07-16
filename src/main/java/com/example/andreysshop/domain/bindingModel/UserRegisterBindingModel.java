@@ -13,7 +13,7 @@ public class UserRegisterBindingModel {
     private String email;
     @Positive(message = "Must be a positive number")
     private BigDecimal budget = BigDecimal.valueOf(0);
-    @Size(min = 2, message = "Password length must be more than two characters!!! Ha-HA-HA")
+    @Size(min = 2, message = "Password length must be more than two characters!!!")
     private String password;
     @Size(min = 2)
     private String confirmPassword;
